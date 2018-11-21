@@ -18,7 +18,8 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      msg: "Components In Detail"
+      msg: "Components In Detail",
+      posts: null
     };
   },
   components: { BlogPost },

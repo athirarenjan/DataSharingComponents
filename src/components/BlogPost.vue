@@ -13,25 +13,28 @@
           <p>{{ post.body }}</p>
         </li>
       </ul>
-      <h2>2) Data shared through Event Bus</h2>
-      i)Creating a global event bus
     </div>
+    <div><server-page></server-page></div>
   </div>
 </template>
 <script>
-import serverBus from "@/main";
+import { serverBus } from "../main";
+import ServerPage from "../components/ServerPage";
 
 export default {
   name: "BlogPost",
   data() {
-    return {};
+    return {
+      showServerPage: false
+    };
   },
+  components: { ServerPage },
   props: ["posts"],
   created: function() {},
   methods: {
     pageSelected: function(index) {
-      alert("clicked");
-      serverBus.$emit("pageSelected", this.posts[index].body);
+      this.showServerPage = true;
+      serverBus.$emit("pageSelected", this.posts);
     }
   }
 };

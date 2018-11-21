@@ -5,12 +5,14 @@
 <script>
 import HelloWorld from "./components/HelloWorld";
 import BlogPost from "./components/BlogPost";
+import ServerPage from "./components/BlogPost";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
-    BlogPost
+    BlogPost,
+    ServerPage
   }
 };
 </script>
