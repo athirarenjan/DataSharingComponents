@@ -34,7 +34,7 @@ export default {
   methods: {
     pageSelected: function(index) {
       this.showServerPage = true;
-      serverBus.$emit("pageSelected", this.posts);
+      serverBus.$emit("pageSelected", this.posts[index]);
     }
   }
 };

@@ -5,6 +5,7 @@
     i)Creating a global event bus
     <p v-if="!page">Please select a server</p>
     <p v-else>Server #{{ page.id }} selected,</p>
+    <p>{{ page.body }}</p>
   </div>
 </template>
 
